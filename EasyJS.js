@@ -3,9 +3,9 @@
 
     Date Started: October 9, 2020
 
-    Last Updated: N/A
+    Last Updated: October 11, 2020
 
-    Version: 1.0.0
+    Version: 1.0.1
 
     Protected by the Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) License
     https://creativecommons.org/licenses/by-nd/4.0/legalcode
