@@ -1,0 +1,24 @@
+{
+  "name": "easyjs",
+  "version": "1.0.0",
+  "description": "Making javascript easy by extending Array, Object, Canvas, Math, and more!",
+  "main": "easy.js",
+  "scripts": {
+    "test": "node easy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BuzzDevDev/EasyJS.git"
+  },
+  "keywords": [
+    "easy",
+    "js",
+    "easyjs"
+  ],
+  "author": "Bleart Emini",
+  "license": "CC BY-ND 4.0",
+  "bugs": {
+    "url": "https://github.com/BuzzDevDev/EasyJS/issues"
+  },
+  "homepage": "https://github.com/BuzzDevDev/EasyJS#readme"
+}
