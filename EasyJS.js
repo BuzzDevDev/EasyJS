@@ -39,7 +39,7 @@ initEasyJS();
 /**
  * 
  * @param {any} elem Element to search for and delete and move.
- * @description Search for a data type in an array and delete and move it to a new array. If an array does not have the element that is being searched, it will return undefined.
+ * @description Searchs for any data type in an array and delete and move it to a new array. If an array does not have the element that is being searched, it will return undefined.
  */
 
 Array.prototype.delMove = (elem) => {
@@ -56,6 +56,7 @@ Array.prototype.delMove = (elem) => {
  * 
  * @param {number} min A number, minimum
  * @param {number} max A number, maximum
+ * @description Generates a random number between a min and a max.
  */
 
 Math.fromTo = (min, max) => {return Math.floor(Math.random() * (max - min + 1) + min)};
@@ -99,7 +100,7 @@ CanvasRenderingContext2D.prototype.colorShape = (shape, w, h, y, x, color) => {
  * @description Easy way to load in a sprite **MAKE SURE YOUR CANVAS CONTEXT IS NAMED CTX**!
  */
 
-CanvasRenderingContext2D.prototype.loadSprite = (path, y, x) => {
+CanvasRenderingContext2D.prototype.loadSprite = (path, x, y) => {
     var imageObj = new Image();
 
     imageObj.onload = function() {
