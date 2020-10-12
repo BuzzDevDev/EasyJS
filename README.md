@@ -17,7 +17,7 @@
 
 <h2>Getting Started</h2>
 <p>First, clone this repository <i>or</i> use the CDN.</p>
-<p>For CDN, Place the following in between the head tags: <script src='https://cdn.jsdelivr.net/gh/BuzzDevDev/EasyJS@1.0.1/EasyJS.min.js' integrity="sha256-zSrE48m3aRf4sLQab5NTDv+/3FYT7VczkEsyinfwj0Q=" crossorigin="anonymous"></script>
+<p>For CDN, Place the following in between the head tags: <script src='https://cdn.jsdelivr.net/gh/BuzzDevDev/EasyJS@1.0.1/EasyJS.min.js'></script>
 </p>
 <br><br>
 
