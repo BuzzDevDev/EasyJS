@@ -92,5 +92,33 @@ document.insertJquery(); <br>
 
 // inserts a script in the body tag of our page at the top <br>
 document.insertScript('js/myFile.js', 'body', true); <br>
+<h4>HTMLDocument.getParent()</h4>
+<h5>Usage</h5>
+<p>
+
+// An optional but easy way to get the parent element's id of a child. <br>
+var myElem = document.getElementById('demo'); <br>
+
+var myElementsParent = document.getParent(); <br>
+
+</p>
+<h4>HTMLDocument.getChild()</h4>
+<h5>Usage</h5>
+<p>  
+
+// An optional but easy way to get the child element's id of a parent. <br>
+var myElem = document.getElementById('demo'); <br>
+
+var myElementsChild = document.getChild(); <br>
+
+</p>
+<h4>HTMLDocument.animateElem(elem, speed, animation)</h4>
+<h5>Usage</h5>
+<p>  
+
+// Adds an animation to an element that happens when the document is loaded. Notice: This requires Jquery! <br>
+// speed is in milliseconds, how long the animation lasts <br>
+// animations that is currently accepted is fade-in, and fade-out <br>
+document.animateElem('myElement', 2500, 'fade-in'); <br>
 
 </p>
