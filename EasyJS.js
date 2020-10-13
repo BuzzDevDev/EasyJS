@@ -5,7 +5,7 @@
 
     Last Updated: October 11, 2020
 
-    Version: 1.0.1
+    Version: v1.1.0
 
     Protected by the Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) License
     https://creativecommons.org/licenses/by-nd/4.0/legalcode
@@ -114,12 +114,10 @@ CanvasRenderingContext2D.prototype.loadSprite = (path, x, y) => {
  */
 
 HTMLDocument.prototype.insertJquery = () => {
-    if (typeof jQuery == 'undefined') {
-        let script = document.createElement('script');
-        script.src = 'https://code.jquery.com/jquery-3.4.1.min.js';
-        script.type = 'text/javascript';
-        document.getElementsByTagName('head')[0].appendChild(script);
-    }
+    let script = document.createElement('script');
+    script.src = 'https://code.jquery.com/jquery-3.4.1.min.js';
+    script.type = 'text/javascript';
+    document.getElementsByTagName('head')[0].appendChild(script);
 }
 
 /**
@@ -139,3 +137,53 @@ HTMLDocument.prototype.insertScript = (script, tagName, top) => {
         document.getElementsByTagName(tagName).appendChild(myScript);
     }
 }
+
+/**
+ * 
+ * @param {string} elem The ID of the child element.
+ * @description An optional but easy way to get the parent element's id of a child.
+ */
+
+HTMLDocument.prototype.getParent = (elem) => {
+    return document.getElementById(elem).parentElement.id;
+};
+
+/**
+ * 
+ * @param {string} elem The ID of the parent element.
+ * @description An optional but easy way to get the first child element's id of a parent.
+ */
+
+HTMLDocument.prototype.getChild = (elem) => {
+    var child = (document.getElementById(elem).firstElementChild.id);
+    return child;
+};
+
+/**
+ * 
+ * @param {string} elem The ID or Class (specify by placing a . or # before the name) of the element you would like to animate.
+ * @param {string} speed The amount of time it takes to finish an animation, in milliseconds.
+ * @param {string} animation The type of animations you would like to add to an element. Currently accepts fade-in, and fade-out.
+ * @description Adds an animation to an element that happens when the document is loaded. **Notice: This requires Jquery!**
+ */
+
+HTMLDocument.prototype.animateElem = (elem, speed, animation) => {
+    switch(animation) {
+        case "fade-in":
+            $(document).ready(function(){
+                $(elem).fadeIn(speed);
+            });
+        break;
+
+        case "fade-out":
+            $(document).ready(function(){
+                $(elem).fadeOut(speed);
+            });
+        break;
+    
+        default:
+            console.log(errors.switch_defualt);
+        break;
+    };
+};
+

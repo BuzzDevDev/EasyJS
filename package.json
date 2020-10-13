@@ -1,10 +1,10 @@
 {
   "name": "easyjs",
-  "version": "1.0.0",
-  "description": "Making javascript easy by extending Array, Object, Canvas, Math, and more!",
-  "main": "easy.js",
+  "version": "v1.1.0",
+  "description": "Making javascript easy by extending Array, HTMLDocument, Canvas, Math, and more!",
+  "main": "EasyJS.js",
   "scripts": {
-    "test": "node easy"
+    "test": ""
   },
   "repository": {
     "type": "git",
