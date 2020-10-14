@@ -5,7 +5,7 @@
 
     Last Updated: October 14, 2020
 
-    Version: v1.2.0
+    Version: v1.2.1
 
     Protected by the Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) License
     https://creativecommons.org/licenses/by-nd/4.0/legalcode
