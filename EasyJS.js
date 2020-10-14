@@ -188,6 +188,7 @@ HTMLDocument.prototype.insertJquery = () => {
  * @param {string} script Link or path your script.
  * @param {string} tagName Where you want to insert your script, takes head or body.
  * @param {boolean} top A boolean to insert a script at the very top of the element or at the bottom.
+ * @description Inserts a script element.
  */
 
 HTMLDocument.prototype.insertScript = (script, tagName, top) => {
