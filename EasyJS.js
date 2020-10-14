@@ -14,7 +14,7 @@
 
 const EasyJSData = {
     since_date: 'October 9, 2020',
-    version: 'v1.2.0',
+    version: 'v1.2.1',
     git: 'https://github.com/BuzzDevDev/EasyJS.git'
 }
 
