@@ -3,14 +3,27 @@
 
     Date Started: October 9, 2020
 
-    Last Updated: October 11, 2020
+    Last Updated: October 14, 2020
 
-    Version: v1.1.0
+    Version: v1.2.0
 
     Protected by the Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) License
     https://creativecommons.org/licenses/by-nd/4.0/legalcode
 
 */
+
+const EasyJSData = {
+    since_date: 'October 9, 2020',
+    version: 'v1.2.0',
+    git: 'https://github.com/BuzzDevDev/EasyJS.git'
+}
+
+var onStartMSG =  `
+    ⚡ EasyJS ${EasyJSData.version} ⚡
+    💻 Github: ${EasyJSData.git} 💻
+    👩‍💻 Since ${EasyJSData.since_date} 👩‍💻
+`
+
 
 var selfEasyJS;
 
@@ -22,16 +35,18 @@ const errors = {
 };
 
 function EasyJS () {
-    this.check = () => {
+    this.onStart = () => {
         
-    };
+    }
 };
 
 function initEasyJS() {
     selfEasyJS = new EasyJS();
+    console.log(onStartMSG);
 };
 
 initEasyJS();
+
 
 
 
@@ -52,6 +67,11 @@ Array.prototype.delMove = (elem) => {
     
 };
 
+
+
+
+
+
 /**
  * 
  * @param {number} min A number, minimum
@@ -60,6 +80,11 @@ Array.prototype.delMove = (elem) => {
  */
 
 Math.fromTo = (min, max) => {return Math.floor(Math.random() * (max - min + 1) + min)};
+
+
+
+
+
 
 /**
  * 
@@ -108,6 +133,44 @@ CanvasRenderingContext2D.prototype.loadSprite = (path, x, y) => {
     };
     imageObj.src = path;
 };
+
+/**
+ * 
+ * @param {string} path The file path of the first frame.
+ * @param {number} y The y position of your sprite.
+ * @param {number} x The x position of your sprite.
+ * @param {number} speed How long each frame of the animation os displayed.
+ * @param {number} frames The number of frames in your animation.
+ * @param {boolean} loopBool Set true if you want the animation to loop and false if not.
+ * @description Loads and replaces the before image to make an animation. Label each frame image as follows: mySprite-1 (change the 1 for each image). Must be a png!
+ */
+
+CanvasRenderingContext2D.prototype.loadSequence = (path, x, y, speed, frames, loopBool) => {
+    var imageObj = new Image();
+    var frameCount = 1;
+    var myPath = `${path}-${frameCount}.png`;
+    var baseInt;
+    baseInt = setInterval(function () {
+        ctx.clearRect(0,0,100,100);
+        imageObj.src = myPath;
+        imageObj.onload = () => {
+            ctx.drawImage(imageObj, x, y);
+        }
+        frameCount++;
+        myPath = `${path}-${frameCount}.png`;
+        if(frameCount > frames && loopBool == false) {
+            clearInterval(baseInt)
+        };
+        if(frameCount >= frames && loopBool == true) {
+            frameCount = 1
+        };
+        
+    }, speed);
+    
+};
+
+
+
 
 /**
  * @description An optional but easy way to add the jquery tag to your html document.
@@ -182,8 +245,7 @@ HTMLDocument.prototype.animateElem = (elem, speed, animation) => {
         break;
     
         default:
-            console.log(errors.switch_defualt);
+            console.error(errors.switch_defualt);
         break;
     };
 };
-
