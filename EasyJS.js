@@ -5,7 +5,7 @@
 
     Last Updated: October 14, 2020
 
-    Version: v1.2.1
+    Version: v1.3.0
 
     Protected by the Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) License
     https://creativecommons.org/licenses/by-nd/4.0/legalcode
@@ -14,7 +14,7 @@
 
 const EasyJSData = {
     since_date: 'October 9, 2020',
-    version: 'v1.2.1',
+    version: 'v1.3.0',
     git: 'https://github.com/BuzzDevDev/EasyJS.git'
 }
 
@@ -142,27 +142,28 @@ CanvasRenderingContext2D.prototype.loadSprite = (path, x, y) => {
  * @param {number} speed How long each frame of the animation os displayed.
  * @param {number} frames The number of frames in your animation.
  * @param {boolean} loopBool Set true if you want the animation to loop and false if not.
+ * @param {string} fileType The file type of your frames, excepts png, jpeg, jpg, and more. Does not except gif.
  * @description Loads and replaces the before image to make an animation. Label each frame image as follows: mySprite-1 (change the 1 for each image). Must be a png!
  */
 
-CanvasRenderingContext2D.prototype.loadSequence = (path, x, y, speed, frames, loopBool) => {
+CanvasRenderingContext2D.prototype.loadSequence = (path, x, y, speed, frames, loopBool, fileType) => {
     var imageObj = new Image();
     var frameCount = 1;
-    var myPath = `${path}-${frameCount}.png`;
+    var myPath = `${path}-${frameCount}.${fileType}`;
     var baseInt;
     baseInt = setInterval(function () {
         ctx.clearRect(0,0,100,100);
         imageObj.src = myPath;
         imageObj.onload = () => {
             ctx.drawImage(imageObj, x, y);
-        }
+        };
         frameCount++;
-        myPath = `${path}-${frameCount}.png`;
+        myPath = `${path}-${frameCount}.${fileType}`;
         if(frameCount > frames && loopBool == false) {
-            clearInterval(baseInt)
+            clearInterval(baseInt);
         };
         if(frameCount >= frames && loopBool == true) {
-            frameCount = 1
+            frameCount = 1;
         };
         
     }, speed);

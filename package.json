@@ -1,6 +1,6 @@
 {
   "name": "easyjs",
-  "version": "v1.2.1",
+  "version": "v1.3.0",
   "description": "Making javascript easy by extending Array, HTMLDocument, Canvas, Math, and more!",
   "main": "EasyJS.js",
   "scripts": {
