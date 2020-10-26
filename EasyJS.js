@@ -5,7 +5,7 @@
 
     Last Updated: October 14, 2020
 
-    Version: v1.3.0
+    Version: v2.0.0
 
     Protected by the Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0) License
     https://creativecommons.org/licenses/by-nd/4.0/legalcode
@@ -14,7 +14,7 @@
 
 const EasyJSData = {
     since_date: 'October 9, 2020',
-    version: 'v1.3.0',
+    version: 'v2.0.0',
     git: 'https://github.com/BuzzDevDev/EasyJS.git'
 }
 
@@ -81,8 +81,80 @@ Array.prototype.delMove = (elem) => {
 
 Math.fromTo = (min, max) => {return Math.floor(Math.random() * (max - min + 1) + min)};
 
+/**
+ * 
+ * @param {number} num1 A number
+ * @param {number} num2 A number
+ * @description Multiplies both numbers then adds to it by a random number from 2 to 5.
+ */
 
+Math.dupe = (num1, num2) => {return (num1 * num2) + Math.floor(Math.random() * (2 - 5 + 1) + 2)}
 
+/**
+ * 
+ * @param {number} degrees The degrees
+ * @description Converts degrees to radius
+ */
+
+Math.degToRad = (degrees) => {return degrees * (Math.PI / 180);}
+
+/**
+ * 
+ * @param {number} rad The radius
+ * @description Converts radius to degrees
+ */
+
+Math.radToDeg = (rad) => {return rad / (Math.PI / 180);};
+
+/**
+ * 
+ * @param {number} num Number
+ * @description Returns true of false if a number is odd.
+ */
+
+Math.isOdd = (num) => {
+    if(num % 2 == 0) {
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+
+/**
+ * 
+ * @param {number} num Number
+ * @description Returns true of false if a number is even.
+ */
+
+Math.isEven = (num) => {
+    if(num % 2 == 0) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+/**
+ * 
+ * @param {number} n Number
+ * @description Returns true of false if a number is a float.
+ */
+
+Math.isFloat = (n) => {
+    return n === +n && n !== (n|0);
+}
+
+/**
+ * 
+ * @param {number} n Number
+ * @description Returns true of false if a number is an integer.
+ */
+
+Math.isInteger = (n) => {
+    return n === +n && n === (n|0);
+}
 
 
 

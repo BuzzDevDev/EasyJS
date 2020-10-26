@@ -1,6 +1,6 @@
 {
   "name": "easyjs",
-  "version": "v1.3.0",
+  "version": "v2.0.0",
   "description": "Making javascript easy by extending Array, HTMLDocument, Canvas, Math, and more!",
   "main": "EasyJS.js",
   "scripts": {
@@ -13,7 +13,10 @@
   "keywords": [
     "easy",
     "js",
-    "easyjs"
+    "easyjs",
+    "easy javascript",
+    "learn javascript",
+    "code faster"
   ],
   "author": "Bleart Emini",
   "license": "CC BY-ND 4.0",
