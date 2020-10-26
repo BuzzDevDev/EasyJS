@@ -42,6 +42,61 @@ var magicBallAnswers = ["Yes", "No", "Maybe"];
 
 console.log(magicBallAnswers[Math.fromTo(0, 2)]);
 </p>
+<h4>Math.dupe(num1, num2)</h4>
+<p>Multiplies both numbers then adds to it by a random number from 2 to 5.</p>
+<h5>Usage</h5>
+<p>
+var score = 192; // random number <br>
+var streak  = 6; // random number <br>
+var scoreMultiplier = Math.dupe(score, streak);
+
+<p>
+<h4>Math.degToRad(degrees)</h4>
+<p>Converts degrees to radius</p>
+<h5>Usage</h5>
+<p>
+var deg = 75; // random number <br>
+var rad = Math.degToRad(deg); <br>
+
+<p>
+<h4>Math.radToDeg(rad)</h4>
+<p>Converts radius to degrees</p>
+<h5>Usage</h5>
+<p>
+var rad = 75; // random number <br>
+var deg = Math.degToRad(rad); <br>
+
+<p>
+<h4>Math.isOdd(num)</h4>
+<p>Returns true of false if a number is odd.</p>
+<h5>Usage</h5>
+<p>
+var num = 314; // random number <br>
+console.log(Math.isOdd(num));
+
+<p>
+<h4>Math.isEven(num)</h4>
+<p>Returns true of false if a number is even.</p>
+<h5>Usage</h5>
+<p>
+var num = 314; // random number <br>
+console.log(Math.isEven(num));
+
+<p>
+<h4>Math.isFloat(n)</h4>
+<p>Returns true of false if a number is a float.</p>
+<h5>Usage</h5>
+<p>
+var num = 314; // random number <br>
+console.log(Math.isFloat(num));
+<p>
+<h4>Math.isInteger(n)</h4>
+<p>Returns true of false if a number is an integer.</p>
+<h5>Usage</h5>
+<p>
+var num = 314; // random number <br>
+console.log(Math.isInteger(num));
+<p>
 <br>
 <h3>CanvasRenderingContext2D</h3>
 <h4>CanvasRenderingContext2D.colorShape(shape, w, h, x, y, color)</h4>
